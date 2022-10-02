@@ -1,0 +1,50 @@
+.galeria {
+    padding: 1rem 0 0 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.Fotos {
+    width: 45vw;
+    border-radius: 1.5rem;
+    margin: 0 auto;
+}
+
+.Foto9 {
+    display: none;
+}
+
+@media (min-width:768px) {
+    .galeria {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .Fotos {
+        width: 30vw;
+    }
+
+    .Foto9 {
+        display: inline-block;
+    }
+}
+
+@media (min-width: 1024px) {
+    .galeria {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .Fotos {
+        width: 20vw;
+    }
+    
+    .Foto9 {
+        display: none;
+    }
+}
+
+@media (min-width:1280px) {
+    .Fotos {
+        width: 23vw;
+    }
+}

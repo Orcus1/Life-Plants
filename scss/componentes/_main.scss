@@ -1,0 +1,73 @@
+#hero {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    margin-top: 1rem;
+    border-top-right-radius: 5rem;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.3),
+        rgba(0,0,0,0.3)
+    )
+    ,url("../Media/Vivero.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+h2 {
+    color: rgb(0, 0, 0);
+    font-size: 2.2em;
+    margin: 2rem auto;
+}
+
+h4 {
+    font-size: 1.2em;
+}
+
+.hero__p {
+    font-size: 1.1em;
+    padding: 2rem;
+    color: rgba(0, 0, 0, 0.9);
+}
+
+.carritoDeFlores {
+    display: none;
+}
+
+@media (min-width: 1024px) {
+    #hero {
+        height: 70vh;
+        border-top-right-radius: 0px;
+        margin: 0;
+    }
+
+    .l-and-p {
+        display: block;
+        width: 11ch;
+        white-space: nowrap;
+        border-right: 4px solid;
+        animation: typing 2s steps(11), blink .5s infinite step-end alternate;
+        overflow: hidden;
+        font-size: 2.5em;
+    }
+        
+    @keyframes typing {
+        from { width: 0}
+    }
+        
+    @keyframes blink {
+        50% {border-color: transparent}
+    }
+
+    h4 {
+        font-size: 1.5em;
+        color: rgba(0, 0, 0, 0.9) !important;
+    }
+
+    .hero__p {
+        width: 80vw;
+        margin: 0 auto;
+        font-size: 1.3em;
+    }
+}

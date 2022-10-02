@@ -315,8 +315,6 @@ iframe {
         grid-template-columns: repeat(4, 1fr);
     }
 
-    /* Galeria CSS */
-
     .Fotos {
         width: 20vw;
     }
@@ -324,8 +322,6 @@ iframe {
     .Foto9 {
         display: none;
     }
-
-    /* Fin Galeria CSS */
 
     .logoFooter {
         font-size: 3em;

@@ -1,0 +1,102 @@
+#sobreNosotros {
+    margin: 0.5rem 0 0 0;
+    background-color: rgb(88, 129, 87);
+    border-top-right-radius: 5rem;
+    border-bottom-right-radius: 5rem;
+}
+
+.button-propio {
+    border-radius: 2rem !important;
+    background-color: $color-principal;
+    box-shadow: none !important;
+}
+
+.button-propio:not(.collapsed) {
+    background-color: $color-principal;
+    color: rgb(0, 0, 0);
+}
+
+.accordion-propio {
+    border-radius: 2em !important;
+}
+
+.accordion-item-propio {
+    background-color: rgb(88, 129, 87) !important;
+}
+
+.sobreNosotros__div__ul {
+    padding: 2rem 0 2rem 2rem;
+}
+
+.sobreNosotros__div__ul__li {
+    list-style-type: square;
+    padding: 0.5rem;
+}
+
+.jardinero {
+    display: none;
+}
+
+#servicios {
+    margin: 1rem 0 0 0;
+}
+
+h3 {
+    font-size: 1.5em;
+    padding: 0 0 0 1.3rem;
+}
+
+.servicios__div__ul__li {
+    padding: 0.4rem 0;
+    list-style-type: circle;
+}
+
+@media (min-width: 1024px) {
+    #sobreNosotros {
+        display: flex;
+        background-color: transparent;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+    .sobreNosotros__div {
+        width: 55vw;
+        background-color: rgb(88, 129, 87);
+        border-top-right-radius: 5rem;
+        border-bottom-right-radius: 5rem;
+    }
+
+    .sobreNosotros__div__ul {
+        padding: 2rem 1rem 2rem 2rem;
+    }
+
+    .jardinero {
+        display: block;
+        width: 40vw;
+        margin: 0 auto;
+        border-radius: 2rem;
+        background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.3),
+        rgba(0,0,0,0.3)
+        )
+        ,url("../Media/jardinero.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+    }
+}
+
+@media (min-width: 1280px) {
+    .jardinero {
+        height: 70vh;
+    }
+
+    .sobreNosotros__div__ul {
+        margin: 1rem 0;
+    }
+
+    .sobreNosotros__div__ul__li {
+        font-size: 1.3em;
+    }
+}

@@ -1,0 +1,19 @@
+{
+  "name": "lifeandplants_tiziano-huerta",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Orcus1/Life-Plants.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Orcus1/Life-Plants/issues"
+  },
+  "homepage": "https://github.com/Orcus1/Life-Plants#readme",
+  "description": ""
+}

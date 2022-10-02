@@ -1,0 +1,94 @@
+#logo {
+    font-size: 2.8em;
+    padding: 1rem;
+}
+
+#logo:hover {
+    color: rgba(0, 0, 0, 0.8) !important;
+}
+
+.logo__link {
+    color: rgb(0, 0, 0) !important;
+    text-decoration: none;
+}
+
+header {
+    background-color: $color-principal;
+    border-bottom-left-radius: 6rem;
+    nav {
+        ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        list-style: none;
+        padding: 0 !important;
+            li {
+            padding: 0.5rem;
+                a {
+                    font-size: 1.5em;
+                    color: rgba(0, 0, 0, 0.8) !important;
+                    text-decoration: none;
+                    position: relative;
+                    &:hover {
+                        color: rgb(0, 0, 0) !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width:1024px) {
+    header {
+        display: flex;
+        border-bottom-left-radius: 0px;
+        nav {
+            ul {
+            display: flex;
+            flex-direction: row;
+            margin: auto 0;
+                li {
+                padding: 3rem 1rem;
+                }
+            }
+        }
+    }
+
+    .nav__menu__li__links::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 0.2rem;
+        background-color: #283a31;
+        transition: 0.6s;
+    }
+    
+    .nav__menu__li__links::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 0;
+        height: 0.2rem;
+        background-color: #283a31;
+        transition: 0.6s;
+    }
+
+    .nav__menu__li:hover .nav__menu__li__links::before {
+        width: 50%;
+        transform: translate(100%);
+    }
+
+    .nav__menu__li:hover .nav__menu__li__links::after {
+        width: 50%;
+        transform: translate(-100%);
+    }
+}
+
+@media (min-width:1280px) {
+    #logo {
+        margin: auto 2rem;
+    }
+}
