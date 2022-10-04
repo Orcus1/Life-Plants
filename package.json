@@ -15,5 +15,9 @@
     "url": "https://github.com/Orcus1/Life-Plants/issues"
   },
   "homepage": "https://github.com/Orcus1/Life-Plants#readme",
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "node-sass": "^7.0.3",
+    "nodemon": "^2.0.20"
+  }
 }

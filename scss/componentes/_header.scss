@@ -8,7 +8,7 @@
 }
 
 .logo__link {
-    color: rgb(0, 0, 0) !important;
+    @extend %black;
     text-decoration: none;
 }
 
@@ -17,8 +17,7 @@ header {
     border-bottom-left-radius: 6rem;
     nav {
         ul {
-        display: flex;
-        flex-direction: column;
+        @include flexColumn();
         align-items: center;
         list-style: none;
         padding: 0 !important;
@@ -30,7 +29,7 @@ header {
                     text-decoration: none;
                     position: relative;
                     &:hover {
-                        color: rgb(0, 0, 0) !important;
+                        @extend %black;
                     }
                 }
             }
@@ -39,6 +38,9 @@ header {
 }
 
 @media (min-width:1024px) {
+    #logo {
+        margin: auto 2rem;
+    }
     header {
         display: flex;
         border-bottom-left-radius: 0px;
@@ -84,11 +86,5 @@ header {
     .nav__menu__li:hover .nav__menu__li__links::after {
         width: 50%;
         transform: translate(-100%);
-    }
-}
-
-@media (min-width:1280px) {
-    #logo {
-        margin: auto 2rem;
     }
 }

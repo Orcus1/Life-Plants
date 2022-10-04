@@ -1,7 +1,6 @@
 #hero {
-    display: flex;
+    @include flexColumn();
     text-align: center;
-    flex-direction: column;
     margin-top: 1rem;
     border-top-right-radius: 5rem;
     background-image: linear-gradient(
@@ -16,28 +15,25 @@
 }
 
 h2 {
-    color: rgb(0, 0, 0);
+    @extend %black;
     font-size: 2.2em;
     margin: 2rem auto;
 }
 
 h4 {
+    color: darken($color-fuente-w, 10%);
     font-size: 1.2em;
 }
 
 .hero__p {
     font-size: 1.1em;
     padding: 2rem;
-    color: rgba(0, 0, 0, 0.9);
-}
-
-.carritoDeFlores {
-    display: none;
+    color: $color-fuente-w;
 }
 
 @media (min-width: 1024px) {
     #hero {
-        height: 70vh;
+        height: 110vh;
         border-top-right-radius: 0px;
         margin: 0;
     }
@@ -45,11 +41,12 @@ h4 {
     .l-and-p {
         display: block;
         width: 11ch;
+        margin-bottom: 1rem;
         white-space: nowrap;
         border-right: 4px solid;
-        animation: typing 2s steps(11), blink .5s infinite step-end alternate;
+        animation: typing 3s steps(11), blink .5s infinite step-end alternate;
         overflow: hidden;
-        font-size: 2.5em;
+        font-size: 2.6em;
     }
         
     @keyframes typing {
@@ -61,13 +58,60 @@ h4 {
     }
 
     h4 {
-        font-size: 1.5em;
-        color: rgba(0, 0, 0, 0.9) !important;
+        font-size: 1.6em;
     }
 
     .hero__p {
-        width: 80vw;
+        width: 70vw;
         margin: 0 auto;
         font-size: 1.3em;
+    }
+
+    .carritoDeFlores-link {
+        color: transparent !important;
+        text-decoration: none;
+        width: 40vw;
+        height: 55vh;
+        margin: 0.5rem auto;
+    }
+
+    .carritoDeFlores {
+        display: inline-block;
+        width: 40vw;
+        height: 55vh;
+        margin: 0.5rem auto;
+        border-radius: 1.5rem;
+        background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.3),
+        rgba(0,0,0,0.3)
+        )
+        ,url("../Media/carritoDeFlores.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        &:hover {
+            background-image: linear-gradient(
+            0deg,
+            rgba(0,0,0,0.4),
+            rgba(0,0,0,0.4)
+            )
+            ,url("../Media/carritoDeFlores.jpg");
+            box-shadow: 0.6rem 0.6rem 0.6rem 0.6rem rgba(0, 0, 0, 0.4);
+        }
+    }
+}
+
+@media (min-width: 1280px) {
+    #hero {
+        height: 120vh;
+    }
+
+    .carritoDeFlores-link {
+        height: 65vh;
+    }
+
+    .carritoDeFlores {
+        height: 65vh;
     }
 }

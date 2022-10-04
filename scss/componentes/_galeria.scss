@@ -6,9 +6,9 @@
 }
 
 .Fotos {
-    width: 45vw;
-    border-radius: 1.5rem;
-    margin: 0 auto;
+    width: map-get($Fotos, ancho);
+    border-radius: map-get($Fotos, redondeado);
+    margin: map-get($Fotos, margen);
 }
 
 .Foto9 {
